@@ -1,0 +1,14 @@
+server:
+  port: 8777
+spring:
+  mustache:
+    prefix: classpath:/templates/
+    suffix: .mustache
+    servlet:
+      cache: false
+  devtools:
+    livereload:
+      enabled: true
+    remote:
+      restart:
+        enabled: false
