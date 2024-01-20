@@ -5,21 +5,45 @@ body, html {
 }
 
 .editor-container {
-    display: flex;
+    display: inline;
     height: 100%;
 }
 
-.text-editor {
-    width: 50%;
+.middle-button {
+    display: inline;
     height: 100%;
-    border: none;
-    resize: none;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 16px;
+    vertical-align: center;
+    text-align: center;
 }
 
-.test {
-    width: 80%;
+.text-editor-left {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px 10px 10px;
+    width: 40%;
+    height: 75%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.5;
+    overflow-y: auto;
+    float: left;
 }
 
+.text-editor-right {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 40%;
+    height: 75%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.5;
+    overflow-y: auto;
+    float: right;
+    padding: 20px 10px 10px;
+}

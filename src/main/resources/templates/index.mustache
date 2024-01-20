@@ -2,22 +2,45 @@
 <html lang="en">
 <head>
     <title>Full-Width Text Editors</title>
-    <!-- CSS 가 먹히지가 않음 ... !! -->
-    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
+
 <body>
-    <div class="editor-container">
-        <textarea class="text-editor"></textarea>
-        <textarea class="text-editor"></textarea>
-    </div>
-
-    <div class="test">
-        <div class="">
-            <textarea class="test"></textarea>
+        <div class="editor-container">
+            <textarea class="text-editor-left" id="input_left_text"></textarea>
         </div>
-    </div>
 
+        <div class="middle-button" style="text-align: center;">
+            <button onclick="jsonParse()">Parse !</button>
+        </div>
 
+        <div class="editor-container">
+            <textarea class="text-editor-right"></textarea>
+        </div>
 </body>
 
 </html>
+
+<script>
+
+    function jsonParse() {
+        try {
+            console.log('INPUT VALUE : ' + document.getElementById("input_left_text"))
+
+            const input = document.getElementById('input_left_text').value;
+
+            console.log('input value : ' + input)
+            const parsed = JSON.parse(input);
+
+            console.log("VALID JSON DATA : " + parsed)
+
+            //alert('JSON is valid! See console for output.');
+            console.log(parsed);
+        } catch (e) {
+            console.log(e)
+            // alert('Invalid JSON format');
+        }
+    }
+
+</script>
