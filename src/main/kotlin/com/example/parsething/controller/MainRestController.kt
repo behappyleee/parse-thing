@@ -8,7 +8,7 @@ class MainRestController {
 
     @GetMapping("/test")
     fun testController(): String {
-        return "THIS IS TEST!"
+        return "THIS IS TESTs!"
     }
 
 }
